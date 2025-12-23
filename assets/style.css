@@ -1,0 +1,633 @@
+/**
+ * NB AI Exchange - Styles
+ * Version 1.2.0 - Added AI Images tab
+ */
+
+/* ============================================
+   Page Layout
+============================================ */
+.wrap.nb-ai-exchange {
+    max-width: 1400px;
+}
+
+.nb-ai-exchange h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nb-ai-exchange h1 .dashicons {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    color: #8b5cf6;
+}
+
+/* ============================================
+   Navigation Tabs
+============================================ */
+.nav-tab-wrapper {
+    margin-bottom: 20px;
+}
+
+.nav-tab .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.nav-tab-active {
+    background: #fff;
+    border-bottom-color: #fff;
+}
+
+/* ============================================
+   Exchange Layout (Two Columns)
+============================================ */
+.nb-exchange-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .nb-exchange-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   Panels
+============================================ */
+.nb-panel {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nb-panel-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 20px;
+}
+
+.nb-panel-header h2 {
+    margin: 0 0 5px 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nb-panel-header p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 13px;
+}
+
+.nb-export-panel .nb-panel-header {
+    background: linear-gradient(135deg, #2271b1 0%, #135e96 100%);
+}
+
+.nb-import-panel .nb-panel-header {
+    background: linear-gradient(135deg, #00a32a 0%, #007017 100%);
+}
+
+.nb-panel-body {
+    padding: 20px;
+}
+
+/* ============================================
+   Form Elements
+============================================ */
+.nb-form-row {
+    margin-bottom: 15px;
+}
+
+.nb-form-row label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1d2327;
+}
+
+.nb-form-row select,
+.nb-form-row input[type="text"],
+.nb-form-row textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.nb-form-row textarea {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 12px;
+    resize: vertical;
+}
+
+.nb-form-row small {
+    display: block;
+    margin-top: 4px;
+    color: #787c82;
+    font-style: italic;
+}
+
+.nb-checkbox-row label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.nb-checkbox-row input[type="checkbox"] {
+    margin: 0;
+}
+
+.nb-checkbox-row small {
+    margin-left: 22px;
+}
+
+/* ============================================
+   Form Row Groups (side by side)
+============================================ */
+.nb-form-row-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.nb-form-row.nb-half {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.nb-form-row.nb-half select {
+    width: 100%;
+}
+
+/* ============================================
+   Import Type Hints
+============================================ */
+.nb-type-hint {
+    background: #f0f6fc;
+    border-left: 4px solid #2271b1;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 0 4px 4px 0;
+}
+
+.nb-type-hint .dashicons {
+    color: #2271b1;
+    margin-top: 2px;
+}
+
+.nb-type-hint.hint-update {
+    background: #fef3c7;
+    border-left-color: #f59e0b;
+}
+
+.nb-type-hint.hint-update .dashicons {
+    color: #d97706;
+}
+
+.nb-type-hint.hint-snippet {
+    background: #f3e8ff;
+    border-left-color: #8b5cf6;
+}
+
+.nb-type-hint.hint-snippet .dashicons {
+    color: #7c3aed;
+}
+
+.nb-type-hint.hint-divi {
+    background: #f3e8ff;
+    border-left-color: #7c3aed;
+}
+
+.nb-type-hint.hint-divi .dashicons {
+    color: #7c3aed;
+}
+
+.nb-type-hint.hint-css {
+    background: #ecfdf5;
+    border-left-color: #10b981;
+}
+
+.nb-type-hint.hint-css .dashicons {
+    color: #059669;
+}
+
+.nb-type-hint.hint-elementor {
+    border-left-color: #d63638;
+}
+
+.nb-type-hint code {
+    background: rgba(0,0,0,0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.nb-form-row select {
+    display: inline-block;
+    width: auto;
+    min-width: 250px;
+}
+
+.nb-form-row .button {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* ============================================
+   Buttons
+============================================ */
+.nb-button-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.nb-button-row .button-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nb-button-row .button-primary .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+#copyStatus {
+    color: #00a32a;
+    font-weight: 500;
+}
+
+/* ============================================
+   Code Preview
+============================================ */
+#codePreview {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f6f7f7;
+    border-radius: 4px;
+}
+
+#codePreview label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#extractedCode {
+    background: #1d2327;
+    color: #68de7c;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 12px;
+    max-height: 300px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* ============================================
+   Status Messages
+============================================ */
+#installStatus {
+    margin-top: 15px;
+}
+
+#installStatus .notice {
+    margin: 0;
+}
+
+/* ============================================
+   Tips Bar
+============================================ */
+.nb-tips-bar {
+    background: #fef3c7;
+    border: 1px solid #fbbf24;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-top: 20px;
+    color: #92400e;
+}
+
+.nb-tips-bar strong {
+    color: #78350f;
+}
+
+/* ============================================
+   Tables
+============================================ */
+.nb-ai-exchange .wp-list-table code {
+    background: #f0f0f1;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.nb-ai-exchange .button-small {
+    margin-right: 5px;
+}
+
+/* ============================================
+   Empty State
+============================================ */
+.nb-empty {
+    text-align: center;
+    color: #787c82;
+    padding: 40px 20px;
+    font-style: italic;
+}
+
+/* ============================================
+   Modal
+============================================ */
+.nb-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
+
+.nb-modal-content {
+    background: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.nb-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #787c82;
+    z-index: 1;
+}
+
+.nb-modal-close:hover {
+    color: #d63638;
+}
+
+.nb-modal-content h3 {
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background: #f6f7f7;
+    border-radius: 8px 8px 0 0;
+}
+
+.nb-modal-content pre {
+    flex: 1;
+    margin: 0;
+    padding: 20px;
+    background: #1d2327;
+    color: #68de7c;
+    font-size: 12px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.nb-modal-content .button {
+    margin: 15px;
+    align-self: flex-start;
+}
+
+/* ============================================
+   Help Content
+============================================ */
+.nb-help-content {
+    line-height: 1.7;
+}
+
+.nb-help-content h3 {
+    color: #1d2327;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.nb-help-content h3:first-child {
+    margin-top: 0;
+}
+
+.nb-help-content ol,
+.nb-help-content ul {
+    margin-left: 20px;
+}
+
+.nb-help-content li {
+    margin-bottom: 8px;
+}
+
+.nb-help-content strong {
+    color: #1d2327;
+}
+
+/* ============================================
+   Responsive
+============================================ */
+@media (max-width: 782px) {
+    .nb-exchange-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .nb-button-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nb-form-row select {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   AI Images Tab
+============================================ */
+.nb-image-import-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 900px) {
+    .nb-image-import-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.nb-image-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nb-image-preview-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#imagePreviewBox {
+    background: #f0f0f1;
+    border: 2px dashed #c3c4c7;
+    border-radius: 8px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#imagePreviewBox img {
+    max-width: 100%;
+    max-height: 400px;
+    display: block;
+    border-radius: 4px;
+}
+
+.nb-preview-placeholder {
+    text-align: center;
+    color: #787c82;
+    padding: 40px;
+}
+
+.nb-preview-placeholder .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.nb-preview-placeholder.nb-preview-error {
+    color: #d63638;
+}
+
+.nb-preview-placeholder.nb-preview-error .dashicons {
+    opacity: 1;
+}
+
+#imageInfo {
+    background: #f6f7f7;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+#imageInfo p {
+    margin: 5px 0;
+}
+
+#imageImportStatus {
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.nb-import-success {
+    background: #edfaef;
+    border: 1px solid #00a32a;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.nb-import-success code {
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+/* Recent Images Grid */
+.nb-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.nb-image-grid-item {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nb-image-grid-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nb-image-grid-item a {
+    display: block;
+}
+
+.nb-image-grid-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.nb-image-grid-info {
+    padding: 8px 10px;
+    font-size: 11px;
+}
+
+.nb-image-grid-info .title {
+    display: block;
+    font-weight: 600;
+    color: #1d2327;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nb-image-grid-info .source {
+    display: block;
+    color: #787c82;
+    margin-top: 2px;
+}
+
+/* Spin animation for loading */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.dashicons.spin {
+    animation: spin 1s linear infinite;
+}
